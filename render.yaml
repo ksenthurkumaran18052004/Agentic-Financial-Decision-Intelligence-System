@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: afdis-api
+    env: docker
+    dockerfilePath: ./Dockerfile.api
+    healthCheckPath: /health
+    autoDeploy: true
+
+  - type: web
+    name: afdis-dashboard
+    env: docker
+    dockerfilePath: ./Dockerfile.dashboard
+    autoDeploy: true
